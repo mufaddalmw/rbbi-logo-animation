@@ -1,0 +1,98 @@
+@import '../../../node_modules/normalize.css/normalize.css';
+html, body, .rbbi__wrapper {
+    height: 100%;
+}
+
+.rbbi__wrapper {
+    background: #0F00BD;
+    position: relative;
+    overflow: hidden;
+    &:before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -60%;
+        height: 150%;
+        width: 150%;
+        background: radial-gradient(ellipse at center, rgba(209,7,49,1) 0%,rgba(15,0,189,0) 70%,rgba(15,0,189,0) 100%);
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -50%;
+        right: -40%;
+        height: 100%;
+        width: 100%;
+        background: radial-gradient(ellipse at center, rgba(209,7,49,1) 0%,rgba(15,0,189,0) 70%,rgba(15,0,189,0) 100%);
+    }
+    &.animation {
+        &:before {
+            animation: movement1 3s linear alternate infinite;
+        }
+        &:after {
+            animation: movement2 3s linear alternate infinite;
+        }
+
+        
+    }
+}
+
+@keyframes movement1 {
+    from {
+        transform: translate(-10%, -10%);
+    }
+    to {
+        transform: translate(10%, 10%);
+    }
+}
+
+@keyframes movement2 {
+    from {
+        transform: translate(10%, 10%);
+    }
+    to {
+        transform: translate(-10%, -10%);
+    }
+}
+
+.shape {
+    margin:0 5px;
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: dash 3s linear alternate infinite;
+  
+}
+
+
+@keyframes dash {
+  0%,10% {
+    stroke-dashoffset: 200;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+  0%, 65% {
+    fill:transparent;
+    stroke: #fff;
+  }
+  75% {
+    fill:#fff;
+      stroke: transparent;
+  }
+  100% {
+     fill:#fff;
+      stroke: transparent; 
+  }
+}
+
+.svg__logos {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+}
