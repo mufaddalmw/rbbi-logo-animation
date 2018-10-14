@@ -443,6 +443,39 @@ body,
           animation: dash 3s linear alternate infinite;
 }
 
+.shape__r {
+  width: 75px;
+  /* Small only */
+}
+
+@media screen and (max-width: 39.9375em) {
+  .shape__r {
+    width: 38px;
+  }
+}
+
+.shape__b {
+  width: 125px;
+  /* Small only */
+}
+
+@media screen and (max-width: 39.9375em) {
+  .shape__b {
+    width: 60px;
+  }
+}
+
+.shape__i {
+  width: 36px;
+  /* Small only */
+}
+
+@media screen and (max-width: 39.9375em) {
+  .shape__i {
+    width: 18px;
+  }
+}
+
 @-webkit-keyframes dash {
   0%, 10% {
     stroke-dashoffset: 200;

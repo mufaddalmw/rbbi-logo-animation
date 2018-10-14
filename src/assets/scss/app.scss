@@ -57,11 +57,33 @@ html, body, .rbbi__wrapper {
 
 .shape {
     margin:0 5px;
-  fill: none;
-  stroke: #fff;
-  stroke-dasharray: 200;
-  stroke-dashoffset: 200;
-  animation: dash 3s linear alternate infinite;
+    fill: none;
+    stroke: #fff;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+    animation: dash 3s linear alternate infinite;
+
+    &__r {
+        width:75px;
+        /* Small only */
+        @media screen and (max-width: 39.9375em) {
+            width:38px;
+        }
+    }
+    &__b {
+        width:125px;
+        /* Small only */
+        @media screen and (max-width: 39.9375em) {
+            width:60px;
+        }
+    }
+    &__i {
+        width:36px;
+        /* Small only */
+        @media screen and (max-width: 39.9375em) {
+            width:18px;
+        }
+    }
   
 }
 
